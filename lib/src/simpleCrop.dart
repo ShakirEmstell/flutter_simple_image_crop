@@ -148,11 +148,23 @@ class ImgCropState extends State<ImgCrop> with TickerProviderStateMixin, Drag {
     // debugPrint(
     //     'image width: ${options.width}, height: ${options.height}  $scale');
 
+  
+    
+    
+      var new_preferredSize=300;
+    try{
+      preferredSize=(preferredSize / scale).round();
+    }catch(e){
+
+    }
+
     final sampleFile = await ImageCrop.sampleImage(
       file: file,
-      preferredSize: (preferredSize / scale).round(),
+      preferredSize: new_preferredSize,
     );
-
+    
+    
+    
     final croppedFile = await ImageCrop.cropImage(
       file: sampleFile,
       area: area,
