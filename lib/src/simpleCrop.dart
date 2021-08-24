@@ -151,7 +151,7 @@ class ImgCropState extends State<ImgCrop> with TickerProviderStateMixin, Drag {
   
     
     
-      var new_preferredSize=300;
+      var new_preferredSize=600;
     try{
       preferredSize=(preferredSize / scale).round();
     }catch(e){
